@@ -4,7 +4,7 @@ app/__pycache__
 headers
 .flaskenv
 
-config/development
+config.ini
 
 .vim
 .idea
@@ -127,4 +127,4 @@ wiki/
 startup
 research/
 double_buffer_state
-dumps/
+work/
