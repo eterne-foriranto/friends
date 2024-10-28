@@ -1,22 +1,13 @@
-from configparser import ConfigParser
+from common import api, config
 from json import dumps
 from os import listdir
 from requests.exceptions import ConnectionError
 from time import localtime
-from vk import API, Session
-
-config = ConfigParser()
-config.read('config.ini')
 
 work_dir = 'work/'
 friends_path = work_dir + 'friends'
 log_path = work_dir + 'friends.log'
-vk_params = config['vk']
-token = vk_params['token']
 target_id = int(config['target']['ids'])
-
-session = Session(access_token=token)
-api = API(session, v=vk_params['api_version'])
 
 
 def get_friends():
